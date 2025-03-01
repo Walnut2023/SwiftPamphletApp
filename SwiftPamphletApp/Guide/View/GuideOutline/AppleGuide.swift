@@ -645,6 +645,71 @@ struct AppleGuide {
                 L(t: "工厂模式"),
             ]),
         L(
+            t: "编程范式", icon: "rectangle.3.group",
+            sub: [
+                L(
+                    t: "面向对象编程", icon: "cube.fill",
+                    sub: [
+                        L(t: "OOP-基本概念"),
+                        L(t: "OOP-SOLID原则"),
+                        L(t: "OOP-Swift中的类和继承"),
+                        L(t: "OOP-优缺点分析"),
+                    ]),
+                L(
+                    t: "面向协议编程", icon: "doc.text.magnifyingglass",
+                    sub: [
+                        L(t: "面向协议编程-概述"),
+                        L(t: "面向协议编程-与OOP对比"),
+                        L(t: "面向协议编程-Swift实现"),
+                        L(t: "面向协议编程-OC中的协议"),
+                        L(t: "面向协议编程-SwiftUI中的应用"),
+                        L(t: "面向协议编程-组合优于继承"),
+                        L(t: "面向协议编程-依赖注入"),
+                        L(t: "面向协议编程-测试友好性"),
+                    ]),
+                L(
+                    t: "函数式编程", icon: "function",
+                    sub: [
+                        L(t: "函数式编程-概述"),
+                        L(t: "函数式编程-Swift实现"),
+                        L(t: "函数式编程-高阶函数"),
+                        L(t: "函数式编程-不可变性"),
+                        L(t: "函数式编程-柯里化"),
+                        L(t: "函数式编程-Swift中的map/filter/reduce"),
+                        L(t: "函数式编程-Swift中的函数组合"),
+                        L(t: "函数式编程-OC中的函数式特性"),
+                        L(t: "函数式编程-实际项目应用"),
+                    ]),
+                L(
+                    t: "响应式编程", icon: "arrow.circlepath",
+                    sub: [
+                        L(t: "响应式编程-概述"),
+                        L(t: "响应式编程-Combine框架"),
+                        L(t: "响应式编程-SwiftUI状态管理"),
+                        L(t: "响应式编程-RxSwift"),
+                        L(t: "响应式编程-OC中的ReactiveCocoa"),
+                        L(t: "响应式编程-与KVO结合"),
+                        L(t: "响应式编程-网络请求实践"),
+                        L(t: "响应式编程-表单验证案例"),
+                        L(t: "响应式编程-与MVVM结合"),
+                        L(t: "响应式编程-SwiftConcurrency+Combine"),
+                        L(t: "响应式编程-迁移指南"),
+                    ]),
+                L(
+                    t: "声明式编程", icon: "text.word.spacing",
+                    sub: [
+                        L(t: "声明式编程-概述"),
+                        L(t: "声明式编程-SwiftUI"),
+                        L(t: "声明式编程-与命令式对比"),
+                        L(t: "声明式编程-SwiftUI布局系统"),
+                        L(t: "声明式编程-SwiftUI状态驱动UI"),
+                        L(t: "声明式编程-OC中的声明式尝试"),
+                        L(t: "声明式编程-DSL设计"),
+                        L(t: "声明式编程-ResultBuilder原理"),
+                        L(t: "声明式编程-实际项目重构"),
+                    ]),
+            ]),
+        L(
             t: "架构设计", icon: "design",
             sub: [
                 L(t: "iOS 架构技术演进"),

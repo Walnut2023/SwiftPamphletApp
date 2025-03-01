@@ -168,12 +168,53 @@
 		18920BBF2D71785B0009557A /* fishhook(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BBE2D71785B0009557A /* fishhook(ap).md */; };
 		18920BC32D71C55F0009557A /* 单例模式(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BC12D71C55F0009557A /* 单例模式(ap).md */; };
 		18920BC62D71C56E0009557A /* 程序入口点(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BC42D71C56E0009557A /* 程序入口点(ap).md */; };
-		18920BD02D71D2590009557A /* iOS架构技术演进.md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BCE2D71D2590009557A /* iOS架构技术演进.md */; };
-		18920BD12D71D2590009557A /* The Composable Architecture.md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BCC2D71D2590009557A /* The Composable Architecture.md */; };
-		18920BD22D71D2590009557A /* Redux风格架构.md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BCB2D71D2590009557A /* Redux风格架构.md */; };
-		18920BD32D71D2590009557A /* Clean SwiftUI.md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BC92D71D2590009557A /* Clean SwiftUI.md */; };
-		18920BD42D71D2590009557A /* MVVM+SwiftUI.md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BCA2D71D2590009557A /* MVVM+SwiftUI.md */; };
-		18920BD52D71D2590009557A /* SOLID与Clean架构详解.md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BCF2D71D2590009557A /* SOLID与Clean架构详解.md */; };
+		18920BDD2D73785B0009557A /* iOS架构技术演进(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BDB2D73785B0009557A /* iOS架构技术演进(ap).md */; };
+		18920BDE2D73785B0009557A /* Redux风格架构(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BD82D73785B0009557A /* Redux风格架构(ap).md */; };
+		18920BDF2D73785B0009557A /* MVVM+SwiftUI(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BD72D73785B0009557A /* MVVM+SwiftUI(ap).md */; };
+		18920BE02D73785B0009557A /* The Composable Architecture(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BD92D73785B0009557A /* The Composable Architecture(ap).md */; };
+		18920BE12D73785B0009557A /* SOLID与Clean架构详解(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BDC2D73785B0009557A /* SOLID与Clean架构详解(ap).md */; };
+		18920BE22D73785B0009557A /* Clean SwiftUI(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BD62D73785B0009557A /* Clean SwiftUI(ap).md */; };
+		18920C112D73786C0009557A /* 声明式编程-SwiftUI(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C002D73786C0009557A /* 声明式编程-SwiftUI(ap).md */; };
+		18920C122D73786C0009557A /* 响应式编程-SwiftConcurrency+Combine(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C0D2D73786C0009557A /* 响应式编程-SwiftConcurrency+Combine(ap).md */; };
+		18920C132D73786C0009557A /* 声明式编程-实际项目重构(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BFB2D73786C0009557A /* 声明式编程-实际项目重构(ap).md */; };
+		18920C142D73786C0009557A /* 声明式编程-OC中的声明式尝试(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BFE2D73786C0009557A /* 声明式编程-OC中的声明式尝试(ap).md */; };
+		18920C152D73786C0009557A /* 响应式编程-迁移指南(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C062D73786C0009557A /* 响应式编程-迁移指南(ap).md */; };
+		18920C162D73786C0009557A /* 响应式编程-表单验证案例(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C042D73786C0009557A /* 响应式编程-表单验证案例(ap).md */; };
+		18920C172D73786C0009557A /* OOP-优缺点分析(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BEE2D73786C0009557A /* OOP-优缺点分析(ap).md */; };
+		18920C182D73786C0009557A /* 声明式编程-SwiftUI布局系统(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C012D73786C0009557A /* 声明式编程-SwiftUI布局系统(ap).md */; };
+		18920C192D73786C0009557A /* 函数式编程-实际项目应用(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BE72D73786C0009557A /* 函数式编程-实际项目应用(ap).md */; };
+		18920C1A2D73786C0009557A /* 声明式编程-DSL设计(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BFD2D73786C0009557A /* 声明式编程-DSL设计(ap).md */; };
+		18920C1B2D73786C0009557A /* 响应式编程-RxSwift(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C0C2D73786C0009557A /* 响应式编程-RxSwift(ap).md */; };
+		18920C1C2D73786C0009557A /* 面向协议编程-依赖注入(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BF32D73786C0009557A /* 面向协议编程-依赖注入(ap).md */; };
+		18920C1D2D73786C0009557A /* 函数式编程-高阶函数(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BE52D73786C0009557A /* 函数式编程-高阶函数(ap).md */; };
+		18920C1E2D73786C0009557A /* 声明式编程-与命令式对比(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BFC2D73786C0009557A /* 声明式编程-与命令式对比(ap).md */; };
+		18920C1F2D73786C0009557A /* 面向协议编程-概述(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BF22D73786C0009557A /* 面向协议编程-概述(ap).md */; };
+		18920C202D73786C0009557A /* 函数式编程-Swift实现(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BE92D73786C0009557A /* 函数式编程-Swift实现(ap).md */; };
+		18920C212D73786C0009557A /* 面向协议编程-测试友好性(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BF12D73786C0009557A /* 面向协议编程-测试友好性(ap).md */; };
+		18920C222D73786C0009557A /* 函数式编程-不可变性(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BE32D73786C0009557A /* 函数式编程-不可变性(ap).md */; };
+		18920C232D73786C0009557A /* 声明式编程-概述(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BFA2D73786C0009557A /* 声明式编程-概述(ap).md */; };
+		18920C242D73786C0009557A /* 面向协议编程-与OOP对比(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BF42D73786C0009557A /* 面向协议编程-与OOP对比(ap).md */; };
+		18920C252D73786C0009557A /* 响应式编程-与MVVM结合(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C092D73786C0009557A /* 响应式编程-与MVVM结合(ap).md */; };
+		18920C262D73786C0009557A /* 响应式编程-OC中的ReactiveCocoa(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C0B2D73786C0009557A /* 响应式编程-OC中的ReactiveCocoa(ap).md */; };
+		18920C272D73786C0009557A /* 面向协议编程-组合优于继承(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BF52D73786C0009557A /* 面向协议编程-组合优于继承(ap).md */; };
+		18920C282D73786C0009557A /* 面向协议编程-OC中的协议(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BF62D73786C0009557A /* 面向协议编程-OC中的协议(ap).md */; };
+		18920C292D73786C0009557A /* 函数式编程-概述(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BE42D73786C0009557A /* 函数式编程-概述(ap).md */; };
+		18920C2A2D73786C0009557A /* 响应式编程-网络请求实践(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C072D73786C0009557A /* 响应式编程-网络请求实践(ap).md */; };
+		18920C2B2D73786C0009557A /* 函数式编程-Swift中的map-filter-reduce(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BEB2D73786C0009557A /* 函数式编程-Swift中的map-filter-reduce(ap).md */; };
+		18920C2C2D73786C0009557A /* 响应式编程-Combine框架(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C0A2D73786C0009557A /* 响应式编程-Combine框架(ap).md */; };
+		18920C2D2D73786C0009557A /* 面向协议编程-SwiftUI中的应用(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BF82D73786C0009557A /* 面向协议编程-SwiftUI中的应用(ap).md */; };
+		18920C2E2D73786C0009557A /* 响应式编程-与KVO结合(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C082D73786C0009557A /* 响应式编程-与KVO结合(ap).md */; };
+		18920C2F2D73786C0009557A /* 响应式编程-概述(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C052D73786C0009557A /* 响应式编程-概述(ap).md */; };
+		18920C302D73786C0009557A /* 函数式编程-柯里化(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BE62D73786C0009557A /* 函数式编程-柯里化(ap).md */; };
+		18920C312D73786C0009557A /* OOP-Swift中的类和继承(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BEF2D73786C0009557A /* OOP-Swift中的类和继承(ap).md */; };
+		18920C322D73786C0009557A /* 面向协议编程-Swift实现(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BF72D73786C0009557A /* 面向协议编程-Swift实现(ap).md */; };
+		18920C332D73786C0009557A /* 声明式编程-SwiftUI状态驱动UI(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C022D73786C0009557A /* 声明式编程-SwiftUI状态驱动UI(ap).md */; };
+		18920C342D73786C0009557A /* 函数式编程-OC中的函数式特性(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BE82D73786C0009557A /* 函数式编程-OC中的函数式特性(ap).md */; };
+		18920C352D73786C0009557A /* 函数式编程-Swift中的函数组合(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BEA2D73786C0009557A /* 函数式编程-Swift中的函数组合(ap).md */; };
+		18920C362D73786C0009557A /* 响应式编程-SwiftUI状态管理(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C0E2D73786C0009557A /* 响应式编程-SwiftUI状态管理(ap).md */; };
+		18920C372D73786C0009557A /* 声明式编程-ResultBuilder原理(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BFF2D73786C0009557A /* 声明式编程-ResultBuilder原理(ap).md */; };
+		18920C382D73786C0009557A /* OOP-基本概念(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BED2D73786C0009557A /* OOP-基本概念(ap).md */; };
+		18920C3A2D737E710009557A /* OOP-SOLID原则(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C392D737E710009557A /* OOP-SOLID原则(ap).md */; };
 		18ADF3352D6CCA6300316707 /* 格式化(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18ADF2732D6CCA6300316707 /* 格式化(ap).md */; };
 		18ADF3362D6CCA6300316707 /* prepend(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18ADF24B2D6CCA6300316707 /* prepend(ap).md */; };
 		18ADF3372D6CCA6300316707 /* Safe Area(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18ADF2BC2D6CCA6300316707 /* Safe Area(ap).md */; };
@@ -575,12 +616,53 @@
 		18920BBE2D71785B0009557A /* fishhook(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "fishhook(ap).md"; sourceTree = "<group>"; };
 		18920BC12D71C55F0009557A /* 单例模式(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "单例模式(ap).md"; sourceTree = "<group>"; };
 		18920BC42D71C56E0009557A /* 程序入口点(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "程序入口点(ap).md"; sourceTree = "<group>"; };
-		18920BC92D71D2590009557A /* Clean SwiftUI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Clean SwiftUI.md"; sourceTree = "<group>"; };
-		18920BCA2D71D2590009557A /* MVVM+SwiftUI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MVVM+SwiftUI.md"; sourceTree = "<group>"; };
-		18920BCB2D71D2590009557A /* Redux风格架构.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Redux风格架构.md"; sourceTree = "<group>"; };
-		18920BCC2D71D2590009557A /* The Composable Architecture.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "The Composable Architecture.md"; sourceTree = "<group>"; };
-		18920BCE2D71D2590009557A /* iOS架构技术演进.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "iOS架构技术演进.md"; sourceTree = "<group>"; };
-		18920BCF2D71D2590009557A /* SOLID与Clean架构详解.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SOLID与Clean架构详解.md"; sourceTree = "<group>"; };
+		18920BD62D73785B0009557A /* Clean SwiftUI(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Clean SwiftUI(ap).md"; sourceTree = "<group>"; };
+		18920BD72D73785B0009557A /* MVVM+SwiftUI(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MVVM+SwiftUI(ap).md"; sourceTree = "<group>"; };
+		18920BD82D73785B0009557A /* Redux风格架构(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Redux风格架构(ap).md"; sourceTree = "<group>"; };
+		18920BD92D73785B0009557A /* The Composable Architecture(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "The Composable Architecture(ap).md"; sourceTree = "<group>"; };
+		18920BDB2D73785B0009557A /* iOS架构技术演进(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "iOS架构技术演进(ap).md"; sourceTree = "<group>"; };
+		18920BDC2D73785B0009557A /* SOLID与Clean架构详解(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SOLID与Clean架构详解(ap).md"; sourceTree = "<group>"; };
+		18920BE32D73786C0009557A /* 函数式编程-不可变性(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-不可变性(ap).md"; sourceTree = "<group>"; };
+		18920BE42D73786C0009557A /* 函数式编程-概述(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-概述(ap).md"; sourceTree = "<group>"; };
+		18920BE52D73786C0009557A /* 函数式编程-高阶函数(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-高阶函数(ap).md"; sourceTree = "<group>"; };
+		18920BE62D73786C0009557A /* 函数式编程-柯里化(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-柯里化(ap).md"; sourceTree = "<group>"; };
+		18920BE72D73786C0009557A /* 函数式编程-实际项目应用(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-实际项目应用(ap).md"; sourceTree = "<group>"; };
+		18920BE82D73786C0009557A /* 函数式编程-OC中的函数式特性(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-OC中的函数式特性(ap).md"; sourceTree = "<group>"; };
+		18920BE92D73786C0009557A /* 函数式编程-Swift实现(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-Swift实现(ap).md"; sourceTree = "<group>"; };
+		18920BEA2D73786C0009557A /* 函数式编程-Swift中的函数组合(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-Swift中的函数组合(ap).md"; sourceTree = "<group>"; };
+		18920BEB2D73786C0009557A /* 函数式编程-Swift中的map-filter-reduce(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-Swift中的map-filter-reduce(ap).md"; sourceTree = "<group>"; };
+		18920BED2D73786C0009557A /* OOP-基本概念(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OOP-基本概念(ap).md"; sourceTree = "<group>"; };
+		18920BEE2D73786C0009557A /* OOP-优缺点分析(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OOP-优缺点分析(ap).md"; sourceTree = "<group>"; };
+		18920BEF2D73786C0009557A /* OOP-Swift中的类和继承(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OOP-Swift中的类和继承(ap).md"; sourceTree = "<group>"; };
+		18920BF12D73786C0009557A /* 面向协议编程-测试友好性(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "面向协议编程-测试友好性(ap).md"; sourceTree = "<group>"; };
+		18920BF22D73786C0009557A /* 面向协议编程-概述(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "面向协议编程-概述(ap).md"; sourceTree = "<group>"; };
+		18920BF32D73786C0009557A /* 面向协议编程-依赖注入(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "面向协议编程-依赖注入(ap).md"; sourceTree = "<group>"; };
+		18920BF42D73786C0009557A /* 面向协议编程-与OOP对比(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "面向协议编程-与OOP对比(ap).md"; sourceTree = "<group>"; };
+		18920BF52D73786C0009557A /* 面向协议编程-组合优于继承(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "面向协议编程-组合优于继承(ap).md"; sourceTree = "<group>"; };
+		18920BF62D73786C0009557A /* 面向协议编程-OC中的协议(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "面向协议编程-OC中的协议(ap).md"; sourceTree = "<group>"; };
+		18920BF72D73786C0009557A /* 面向协议编程-Swift实现(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "面向协议编程-Swift实现(ap).md"; sourceTree = "<group>"; };
+		18920BF82D73786C0009557A /* 面向协议编程-SwiftUI中的应用(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "面向协议编程-SwiftUI中的应用(ap).md"; sourceTree = "<group>"; };
+		18920BFA2D73786C0009557A /* 声明式编程-概述(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "声明式编程-概述(ap).md"; sourceTree = "<group>"; };
+		18920BFB2D73786C0009557A /* 声明式编程-实际项目重构(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "声明式编程-实际项目重构(ap).md"; sourceTree = "<group>"; };
+		18920BFC2D73786C0009557A /* 声明式编程-与命令式对比(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "声明式编程-与命令式对比(ap).md"; sourceTree = "<group>"; };
+		18920BFD2D73786C0009557A /* 声明式编程-DSL设计(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "声明式编程-DSL设计(ap).md"; sourceTree = "<group>"; };
+		18920BFE2D73786C0009557A /* 声明式编程-OC中的声明式尝试(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "声明式编程-OC中的声明式尝试(ap).md"; sourceTree = "<group>"; };
+		18920BFF2D73786C0009557A /* 声明式编程-ResultBuilder原理(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "声明式编程-ResultBuilder原理(ap).md"; sourceTree = "<group>"; };
+		18920C002D73786C0009557A /* 声明式编程-SwiftUI(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "声明式编程-SwiftUI(ap).md"; sourceTree = "<group>"; };
+		18920C012D73786C0009557A /* 声明式编程-SwiftUI布局系统(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "声明式编程-SwiftUI布局系统(ap).md"; sourceTree = "<group>"; };
+		18920C022D73786C0009557A /* 声明式编程-SwiftUI状态驱动UI(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "声明式编程-SwiftUI状态驱动UI(ap).md"; sourceTree = "<group>"; };
+		18920C042D73786C0009557A /* 响应式编程-表单验证案例(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-表单验证案例(ap).md"; sourceTree = "<group>"; };
+		18920C052D73786C0009557A /* 响应式编程-概述(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-概述(ap).md"; sourceTree = "<group>"; };
+		18920C062D73786C0009557A /* 响应式编程-迁移指南(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-迁移指南(ap).md"; sourceTree = "<group>"; };
+		18920C072D73786C0009557A /* 响应式编程-网络请求实践(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-网络请求实践(ap).md"; sourceTree = "<group>"; };
+		18920C082D73786C0009557A /* 响应式编程-与KVO结合(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-与KVO结合(ap).md"; sourceTree = "<group>"; };
+		18920C092D73786C0009557A /* 响应式编程-与MVVM结合(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-与MVVM结合(ap).md"; sourceTree = "<group>"; };
+		18920C0A2D73786C0009557A /* 响应式编程-Combine框架(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-Combine框架(ap).md"; sourceTree = "<group>"; };
+		18920C0B2D73786C0009557A /* 响应式编程-OC中的ReactiveCocoa(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-OC中的ReactiveCocoa(ap).md"; sourceTree = "<group>"; };
+		18920C0C2D73786C0009557A /* 响应式编程-RxSwift(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-RxSwift(ap).md"; sourceTree = "<group>"; };
+		18920C0D2D73786C0009557A /* 响应式编程-SwiftConcurrency+Combine(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-SwiftConcurrency+Combine(ap).md"; sourceTree = "<group>"; };
+		18920C0E2D73786C0009557A /* 响应式编程-SwiftUI状态管理(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-SwiftUI状态管理(ap).md"; sourceTree = "<group>"; };
+		18920C392D737E710009557A /* OOP-SOLID原则(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OOP-SOLID原则(ap).md"; sourceTree = "<group>"; };
 		18ADF22F2D6CCA6300316707 /* Keychain(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Keychain(ap).md"; sourceTree = "<group>"; };
 		18ADF2312D6CCA6300316707 /* 布局动画(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "布局动画(ap).md"; sourceTree = "<group>"; };
 		18ADF2322D6CCA6300316707 /* 动画-例子(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "动画-例子(ap).md"; sourceTree = "<group>"; };
@@ -1117,6 +1199,7 @@
 		08BDD4FB2C6B007A00914412 /* appstore */ = {
 			isa = PBXGroup;
 			children = (
+				18920C102D73786C0009557A /* 编程范式 */,
 				18920BC82D71C5A20009557A /* VersionOS */,
 				18920BC72D71C5840009557A /* 架构设计 */,
 				18920B822D716F2E0009557A /* 性能优化 */,
@@ -1410,9 +1493,9 @@
 		18920BC72D71C5840009557A /* 架构设计 */ = {
 			isa = PBXGroup;
 			children = (
-				18920BCD2D71D2590009557A /* 架构实践演进 */,
-				18920BCE2D71D2590009557A /* iOS架构技术演进.md */,
-				18920BCF2D71D2590009557A /* SOLID与Clean架构详解.md */,
+				18920BDA2D73785B0009557A /* 架构实践演进 */,
+				18920BDB2D73785B0009557A /* iOS架构技术演进(ap).md */,
+				18920BDC2D73785B0009557A /* SOLID与Clean架构详解(ap).md */,
 			);
 			path = "架构设计";
 			sourceTree = "<group>";
@@ -1424,15 +1507,103 @@
 			path = VersionOS;
 			sourceTree = "<group>";
 		};
-		18920BCD2D71D2590009557A /* 架构实践演进 */ = {
+		18920BDA2D73785B0009557A /* 架构实践演进 */ = {
 			isa = PBXGroup;
 			children = (
-				18920BC92D71D2590009557A /* Clean SwiftUI.md */,
-				18920BCA2D71D2590009557A /* MVVM+SwiftUI.md */,
-				18920BCB2D71D2590009557A /* Redux风格架构.md */,
-				18920BCC2D71D2590009557A /* The Composable Architecture.md */,
+				18920BD62D73785B0009557A /* Clean SwiftUI(ap).md */,
+				18920BD72D73785B0009557A /* MVVM+SwiftUI(ap).md */,
+				18920BD82D73785B0009557A /* Redux风格架构(ap).md */,
+				18920BD92D73785B0009557A /* The Composable Architecture(ap).md */,
 			);
 			path = "架构实践演进";
+			sourceTree = "<group>";
+		};
+		18920BEC2D73786C0009557A /* 函数式编程 */ = {
+			isa = PBXGroup;
+			children = (
+				18920BE32D73786C0009557A /* 函数式编程-不可变性(ap).md */,
+				18920BE42D73786C0009557A /* 函数式编程-概述(ap).md */,
+				18920BE52D73786C0009557A /* 函数式编程-高阶函数(ap).md */,
+				18920BE62D73786C0009557A /* 函数式编程-柯里化(ap).md */,
+				18920BE72D73786C0009557A /* 函数式编程-实际项目应用(ap).md */,
+				18920BE82D73786C0009557A /* 函数式编程-OC中的函数式特性(ap).md */,
+				18920BE92D73786C0009557A /* 函数式编程-Swift实现(ap).md */,
+				18920BEA2D73786C0009557A /* 函数式编程-Swift中的函数组合(ap).md */,
+				18920BEB2D73786C0009557A /* 函数式编程-Swift中的map-filter-reduce(ap).md */,
+			);
+			path = "函数式编程";
+			sourceTree = "<group>";
+		};
+		18920BF02D73786C0009557A /* 面向对象编程 */ = {
+			isa = PBXGroup;
+			children = (
+				18920C392D737E710009557A /* OOP-SOLID原则(ap).md */,
+				18920BED2D73786C0009557A /* OOP-基本概念(ap).md */,
+				18920BEE2D73786C0009557A /* OOP-优缺点分析(ap).md */,
+				18920BEF2D73786C0009557A /* OOP-Swift中的类和继承(ap).md */,
+			);
+			path = "面向对象编程";
+			sourceTree = "<group>";
+		};
+		18920BF92D73786C0009557A /* 面向协议编程 */ = {
+			isa = PBXGroup;
+			children = (
+				18920BF12D73786C0009557A /* 面向协议编程-测试友好性(ap).md */,
+				18920BF22D73786C0009557A /* 面向协议编程-概述(ap).md */,
+				18920BF32D73786C0009557A /* 面向协议编程-依赖注入(ap).md */,
+				18920BF42D73786C0009557A /* 面向协议编程-与OOP对比(ap).md */,
+				18920BF52D73786C0009557A /* 面向协议编程-组合优于继承(ap).md */,
+				18920BF62D73786C0009557A /* 面向协议编程-OC中的协议(ap).md */,
+				18920BF72D73786C0009557A /* 面向协议编程-Swift实现(ap).md */,
+				18920BF82D73786C0009557A /* 面向协议编程-SwiftUI中的应用(ap).md */,
+			);
+			path = "面向协议编程";
+			sourceTree = "<group>";
+		};
+		18920C032D73786C0009557A /* 声明式编程 */ = {
+			isa = PBXGroup;
+			children = (
+				18920BFA2D73786C0009557A /* 声明式编程-概述(ap).md */,
+				18920BFB2D73786C0009557A /* 声明式编程-实际项目重构(ap).md */,
+				18920BFC2D73786C0009557A /* 声明式编程-与命令式对比(ap).md */,
+				18920BFD2D73786C0009557A /* 声明式编程-DSL设计(ap).md */,
+				18920BFE2D73786C0009557A /* 声明式编程-OC中的声明式尝试(ap).md */,
+				18920BFF2D73786C0009557A /* 声明式编程-ResultBuilder原理(ap).md */,
+				18920C002D73786C0009557A /* 声明式编程-SwiftUI(ap).md */,
+				18920C012D73786C0009557A /* 声明式编程-SwiftUI布局系统(ap).md */,
+				18920C022D73786C0009557A /* 声明式编程-SwiftUI状态驱动UI(ap).md */,
+			);
+			path = "声明式编程";
+			sourceTree = "<group>";
+		};
+		18920C0F2D73786C0009557A /* 响应式编程 */ = {
+			isa = PBXGroup;
+			children = (
+				18920C042D73786C0009557A /* 响应式编程-表单验证案例(ap).md */,
+				18920C052D73786C0009557A /* 响应式编程-概述(ap).md */,
+				18920C062D73786C0009557A /* 响应式编程-迁移指南(ap).md */,
+				18920C072D73786C0009557A /* 响应式编程-网络请求实践(ap).md */,
+				18920C082D73786C0009557A /* 响应式编程-与KVO结合(ap).md */,
+				18920C092D73786C0009557A /* 响应式编程-与MVVM结合(ap).md */,
+				18920C0A2D73786C0009557A /* 响应式编程-Combine框架(ap).md */,
+				18920C0B2D73786C0009557A /* 响应式编程-OC中的ReactiveCocoa(ap).md */,
+				18920C0C2D73786C0009557A /* 响应式编程-RxSwift(ap).md */,
+				18920C0D2D73786C0009557A /* 响应式编程-SwiftConcurrency+Combine(ap).md */,
+				18920C0E2D73786C0009557A /* 响应式编程-SwiftUI状态管理(ap).md */,
+			);
+			path = "响应式编程";
+			sourceTree = "<group>";
+		};
+		18920C102D73786C0009557A /* 编程范式 */ = {
+			isa = PBXGroup;
+			children = (
+				18920BEC2D73786C0009557A /* 函数式编程 */,
+				18920BF02D73786C0009557A /* 面向对象编程 */,
+				18920BF92D73786C0009557A /* 面向协议编程 */,
+				18920C032D73786C0009557A /* 声明式编程 */,
+				18920C0F2D73786C0009557A /* 响应式编程 */,
+			);
+			path = "编程范式";
 			sourceTree = "<group>";
 		};
 		18ADF2302D6CCA6300316707 /* 安全 */ = {
@@ -2248,12 +2419,6 @@
 				18920B8C2D716F2E0009557A /* 包的分析(ap).md in Resources */,
 				18920B8D2D716F2E0009557A /* 启动优化-一些技巧(ap).md in Resources */,
 				18920B8E2D716F2E0009557A /* Swift项目启动时间(ap).md in Resources */,
-				18920BD02D71D2590009557A /* iOS架构技术演进.md in Resources */,
-				18920BD12D71D2590009557A /* The Composable Architecture.md in Resources */,
-				18920BD22D71D2590009557A /* Redux风格架构.md in Resources */,
-				18920BD32D71D2590009557A /* Clean SwiftUI.md in Resources */,
-				18920BD42D71D2590009557A /* MVVM+SwiftUI.md in Resources */,
-				18920BD52D71D2590009557A /* SOLID与Clean架构详解.md in Resources */,
 				18920B8F2D716F2E0009557A /* 卡死崩溃监控(ap).md in Resources */,
 				18920B902D716F2E0009557A /* 启动优化-工具(ap).md in Resources */,
 				18920B912D716F2E0009557A /* 动态库注入技术(ap).md in Resources */,
@@ -2359,9 +2524,16 @@
 				18ADF3A92D6CCA6300316707 /* List-完全可点击的行(ap).md in Resources */,
 				18ADF3AA2D6CCA6300316707 /* 格式化-时间(ap).md in Resources */,
 				18ADF3AB2D6CCA6300316707 /* Combine通知(ap).md in Resources */,
+				18920C3A2D737E710009557A /* OOP-SOLID原则(ap).md in Resources */,
 				18ADF3AC2D6CCA6300316707 /* SwiftData-版本迁移(ap).md in Resources */,
 				18ADF3AD2D6CCA6300316707 /* Menu和ContextMenu(ap).md in Resources */,
 				18ADF3AE2D6CCA6300316707 /* Table-contextMenu(ap).md in Resources */,
+				18920BDD2D73785B0009557A /* iOS架构技术演进(ap).md in Resources */,
+				18920BDE2D73785B0009557A /* Redux风格架构(ap).md in Resources */,
+				18920BDF2D73785B0009557A /* MVVM+SwiftUI(ap).md in Resources */,
+				18920BE02D73785B0009557A /* The Composable Architecture(ap).md in Resources */,
+				18920BE12D73785B0009557A /* SOLID与Clean架构详解(ap).md in Resources */,
+				18920BE22D73785B0009557A /* Clean SwiftUI(ap).md in Resources */,
 				18ADF3AF2D6CCA6300316707 /* 自定义修饰符(ap).md in Resources */,
 				18ADF3B02D6CCA6300316707 /* @resultBuilder(ap).md in Resources */,
 				18ADF3B12D6CCA6300316707 /* scrollTransition视觉效果(ap).md in Resources */,
@@ -2445,6 +2617,46 @@
 				18ADF4002D6CCA6300316707 /* NavigationSplitView(ap).md in Resources */,
 				18ADF4012D6CCA6300316707 /* alignmentGuide(ap).md in Resources */,
 				18ADF4022D6CCA6300316707 /* 布局原理(ap).md in Resources */,
+				18920C112D73786C0009557A /* 声明式编程-SwiftUI(ap).md in Resources */,
+				18920C122D73786C0009557A /* 响应式编程-SwiftConcurrency+Combine(ap).md in Resources */,
+				18920C132D73786C0009557A /* 声明式编程-实际项目重构(ap).md in Resources */,
+				18920C142D73786C0009557A /* 声明式编程-OC中的声明式尝试(ap).md in Resources */,
+				18920C152D73786C0009557A /* 响应式编程-迁移指南(ap).md in Resources */,
+				18920C162D73786C0009557A /* 响应式编程-表单验证案例(ap).md in Resources */,
+				18920C172D73786C0009557A /* OOP-优缺点分析(ap).md in Resources */,
+				18920C182D73786C0009557A /* 声明式编程-SwiftUI布局系统(ap).md in Resources */,
+				18920C192D73786C0009557A /* 函数式编程-实际项目应用(ap).md in Resources */,
+				18920C1A2D73786C0009557A /* 声明式编程-DSL设计(ap).md in Resources */,
+				18920C1B2D73786C0009557A /* 响应式编程-RxSwift(ap).md in Resources */,
+				18920C1C2D73786C0009557A /* 面向协议编程-依赖注入(ap).md in Resources */,
+				18920C1D2D73786C0009557A /* 函数式编程-高阶函数(ap).md in Resources */,
+				18920C1E2D73786C0009557A /* 声明式编程-与命令式对比(ap).md in Resources */,
+				18920C1F2D73786C0009557A /* 面向协议编程-概述(ap).md in Resources */,
+				18920C202D73786C0009557A /* 函数式编程-Swift实现(ap).md in Resources */,
+				18920C212D73786C0009557A /* 面向协议编程-测试友好性(ap).md in Resources */,
+				18920C222D73786C0009557A /* 函数式编程-不可变性(ap).md in Resources */,
+				18920C232D73786C0009557A /* 声明式编程-概述(ap).md in Resources */,
+				18920C242D73786C0009557A /* 面向协议编程-与OOP对比(ap).md in Resources */,
+				18920C252D73786C0009557A /* 响应式编程-与MVVM结合(ap).md in Resources */,
+				18920C262D73786C0009557A /* 响应式编程-OC中的ReactiveCocoa(ap).md in Resources */,
+				18920C272D73786C0009557A /* 面向协议编程-组合优于继承(ap).md in Resources */,
+				18920C282D73786C0009557A /* 面向协议编程-OC中的协议(ap).md in Resources */,
+				18920C292D73786C0009557A /* 函数式编程-概述(ap).md in Resources */,
+				18920C2A2D73786C0009557A /* 响应式编程-网络请求实践(ap).md in Resources */,
+				18920C2B2D73786C0009557A /* 函数式编程-Swift中的map-filter-reduce(ap).md in Resources */,
+				18920C2C2D73786C0009557A /* 响应式编程-Combine框架(ap).md in Resources */,
+				18920C2D2D73786C0009557A /* 面向协议编程-SwiftUI中的应用(ap).md in Resources */,
+				18920C2E2D73786C0009557A /* 响应式编程-与KVO结合(ap).md in Resources */,
+				18920C2F2D73786C0009557A /* 响应式编程-概述(ap).md in Resources */,
+				18920C302D73786C0009557A /* 函数式编程-柯里化(ap).md in Resources */,
+				18920C312D73786C0009557A /* OOP-Swift中的类和继承(ap).md in Resources */,
+				18920C322D73786C0009557A /* 面向协议编程-Swift实现(ap).md in Resources */,
+				18920C332D73786C0009557A /* 声明式编程-SwiftUI状态驱动UI(ap).md in Resources */,
+				18920C342D73786C0009557A /* 函数式编程-OC中的函数式特性(ap).md in Resources */,
+				18920C352D73786C0009557A /* 函数式编程-Swift中的函数组合(ap).md in Resources */,
+				18920C362D73786C0009557A /* 响应式编程-SwiftUI状态管理(ap).md in Resources */,
+				18920C372D73786C0009557A /* 声明式编程-ResultBuilder原理(ap).md in Resources */,
+				18920C382D73786C0009557A /* OOP-基本概念(ap).md in Resources */,
 				18ADF4032D6CCA6300316707 /* Combine KVO(ap).md in Resources */,
 				18ADF4052D6CCA6300316707 /* 固定到滚动视图的顶部(ap).md in Resources */,
 				18ADF4062D6CCA6300316707 /* 自定义导航栏(ap).md in Resources */,

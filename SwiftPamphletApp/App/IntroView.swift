@@ -5,10 +5,10 @@
 //  Created by Ming Dai on 2021/12/31.
 //
 
-import SwiftUI
 import MarkdownUI
 import SMFile
 import SMUI
+import SwiftUI
 
 struct LightingView<Content: View>: View {
     @Environment(\.colorScheme) var colorSchemeMode
@@ -25,7 +25,7 @@ struct LightingView<Content: View>: View {
             content
                 .blur(radius: 1)
             content
-                
+
         }
     }
 }
@@ -34,21 +34,21 @@ struct IntroView: View {
     var body: some View {
         VStack(spacing: 15) {
             #if os(macOS)
-            if let appIcon = NSImage(named: "AppIcon") {
-                Image(nsImage: appIcon)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 120, height: 120)
-            }
+                if let appIcon = NSImage(named: "AppIcon") {
+                    Image(nsImage: appIcon)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 120, height: 120)
+                }
             #elseif os(iOS)
-            if let appIcon = UIImage(named: "AppIcon") {
-                Image(uiImage: appIcon)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 120, height: 120)
-            }
+                if let appIcon = UIImage(named: "AppIcon") {
+                    Image(uiImage: appIcon)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 120, height: 120)
+                }
             #endif
-            Text("戴铭的开发小册子").bold()
+            Text("Tango的开发小册子").bold()
             LightingView {
                 Text("Swift Pamphlet App").gradientTitle(color: .mint)
             }
@@ -59,11 +59,8 @@ struct IntroView: View {
             if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
                 Text("版本\(version)").font(.footnote)
             }
-            Markdown(SMFile.loadBundleString("1.md"))
+            Markdown(SMFile.loadBundleString("intro.md"))
         }
         .frame(minWidth: SPC.detailMinWidth)
     }
 }
-
-
-
