@@ -175,39 +175,41 @@ struct UserTestDataGenerator: TestDataGenerating {
    - 避免在测试协议中包含不必要的方法
 
 2. **可配置性**
-   ```swift
-   protocol Configurable {
-       associatedtype Configuration
-       func configure(with configuration: Configuration)
+
+```swift
+protocol Configurable {
+   associatedtype Configuration
+   func configure(with configuration: Configuration)
+}
+
+extension Configurable {
+   func withConfiguration(_ configuration: Configuration) -> Self {
+       var copy = self
+       copy.configure(with: configuration)
+       return copy
    }
-   
-   extension Configurable {
-       func withConfiguration(_ configuration: Configuration) -> Self {
-           var copy = self
-           copy.configure(with: configuration)
-           return copy
-       }
-   }
-   ```
+}
+```
 
 3. **错误处理**
-   ```swift
-   protocol ErrorSimulating {
-       func simulateError(_ error: Error)
-       func simulateNetworkError()
-       func simulateTimeoutError()
+
+```swift
+protocol ErrorSimulating {
+   func simulateError(_ error: Error)
+   func simulateNetworkError()
+   func simulateTimeoutError()
+}
+
+extension ErrorSimulating {
+   func simulateNetworkError() {
+       simulateError(NSError(domain: "Network", code: -1009))
    }
    
-   extension ErrorSimulating {
-       func simulateNetworkError() {
-           simulateError(NSError(domain: "Network", code: -1009))
-       }
-       
-       func simulateTimeoutError() {
-           simulateError(NSError(domain: "Network", code: -1001))
-       }
+   func simulateTimeoutError() {
+       simulateError(NSError(domain: "Network", code: -1001))
    }
-   ```
+}
+```
 
 ## 测试示例
 

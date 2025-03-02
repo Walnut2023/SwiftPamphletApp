@@ -675,7 +675,7 @@ struct AppleGuide {
                         L(t: "函数式编程-高阶函数"),
                         L(t: "函数式编程-不可变性"),
                         L(t: "函数式编程-柯里化"),
-                        L(t: "函数式编程-Swift中的map/filter/reduce"),
+                        L(t: "函数式编程-Swift中的map,filter和reduce"),
                         L(t: "函数式编程-Swift中的函数组合"),
                         L(t: "函数式编程-OC中的函数式特性"),
                         L(t: "函数式编程-实际项目应用"),

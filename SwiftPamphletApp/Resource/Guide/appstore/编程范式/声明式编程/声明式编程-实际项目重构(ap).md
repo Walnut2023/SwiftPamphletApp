@@ -173,6 +173,7 @@ class UserManager {
 ```
 
 #### 重构后代码（声明式）
+
 ```swift
 @MainActor
 class UserManager: ObservableObject {
@@ -231,6 +232,7 @@ struct UserView: View {
 ## 最佳实践
 
 1. **代码组织**
+
 ```swift
 // 将相关功能组织在一起
 struct FeatureView: View {
@@ -270,6 +272,7 @@ struct FeatureView: View {
 ```
 
 2. **状态管理**
+
 ```swift
 // 使用专门的状态容器
 class FeatureViewModel: ObservableObject {

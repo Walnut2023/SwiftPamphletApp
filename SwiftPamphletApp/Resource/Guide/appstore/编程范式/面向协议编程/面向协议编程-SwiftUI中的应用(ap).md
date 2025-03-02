@@ -132,42 +132,46 @@ class AppViewModel: ObservableObject {
    - 使用协议组合而不是创建庞大的协议
 
 2. **利用协议扩展**
-   ```swift
-   protocol Validatable {
-       var isValid: Bool { get }
-       var validationError: String? { get }
+
+```swift
+protocol Validatable {
+   var isValid: Bool { get }
+   var validationError: String? { get }
+}
+
+extension Validatable {
+   var validationError: String? {
+       return isValid ? nil : "验证失败"
    }
+}
+```
    
-   extension Validatable {
-       var validationError: String? {
-           return isValid ? nil : "验证失败"
-       }
-   }
-   ```
 
 3. **组合优于继承**
-   ```swift
-   protocol Loadable {
-       var isLoading: Bool { get set }
-   }
+
+```swift
+protocol Loadable {
+   var isLoading: Bool { get set }
+}
+
+protocol Refreshable {
+   func refresh() async
+}
+
+protocol ErrorHandling {
+   var error: Error? { get set }
+}
+
+class BaseViewModel: ObservableObject, Loadable, Refreshable, ErrorHandling {
+   @Published var isLoading = false
+   @Published var error: Error?
    
-   protocol Refreshable {
-       func refresh() async
+   func refresh() async {
+       // 实现刷新逻辑
    }
+}
+```
    
-   protocol ErrorHandling {
-       var error: Error? { get set }
-   }
-   
-   class BaseViewModel: ObservableObject, Loadable, Refreshable, ErrorHandling {
-       @Published var isLoading = false
-       @Published var error: Error?
-       
-       func refresh() async {
-           // 实现刷新逻辑
-       }
-   }
-   ```
 
 ## 性能优化
 
@@ -176,45 +180,51 @@ class AppViewModel: ObservableObject {
    - 避免使用@objc协议，除非必要
 
 2. **协议组合的合理使用**
-   ```swift
-   protocol ViewModelProtocol: ObservableObject, Loadable, ErrorHandling {}
-   ```
+
+```swift
+protocol ViewModelProtocol: ObservableObject, Loadable, ErrorHandling {}
+```
+   
 
 ## 常见问题与解决方案
 
 1. **关联类型的处理**
-   ```swift
-   protocol DataProvider {
-       associatedtype Data
-       func fetchData() async throws -> Data
+
+```swift
+protocol DataProvider {
+   associatedtype Data
+   func fetchData() async throws -> Data
+}
+
+// 使用类型擦除包装器
+struct AnyDataProvider<T>: DataProvider {
+   private let _fetchData: () async throws -> T
+   
+   init<P: DataProvider>(_ provider: P) where P.Data == T {
+       _fetchData = provider.fetchData
    }
    
-   // 使用类型擦除包装器
-   struct AnyDataProvider<T>: DataProvider {
-       private let _fetchData: () async throws -> T
-       
-       init<P: DataProvider>(_ provider: P) where P.Data == T {
-           _fetchData = provider.fetchData
-       }
-       
-       func fetchData() async throws -> T {
-           try await _fetchData()
-       }
+   func fetchData() async throws -> T {
+       try await _fetchData()
    }
-   ```
+}
+```
+   
 
 2. **协议扩展中的默认实现**
-   ```swift
-   protocol Alertable {
-       func showAlert(title: String, message: String)
+
+```swift
+protocol Alertable {
+   func showAlert(title: String, message: String)
+}
+
+extension Alertable where Self: View {
+   func showAlert(title: String, message: String) {
+       // 默认的警告框实现
    }
+}
+```
    
-   extension Alertable where Self: View {
-       func showAlert(title: String, message: String) {
-           // 默认的警告框实现
-       }
-   }
-   ```
 
 通过在SwiftUI中合理运用面向协议编程，我们可以：
 

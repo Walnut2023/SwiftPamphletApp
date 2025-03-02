@@ -139,6 +139,7 @@ struct CustomLayout: Layout {
 ## 布局修饰符
 
 ### 1. 尺寸修饰符
+
 ```swift
 Text("调整大小")
     .frame(width: 200, height: 100)
@@ -147,6 +148,7 @@ Text("调整大小")
 ```
 
 ### 2. 位置修饰符
+
 ```swift
 Text("位置调整")
     .position(x: 100, y: 100)
@@ -154,6 +156,7 @@ Text("位置调整")
 ```
 
 ### 3. 对齐修饰符
+
 ```swift
 HStack(alignment: .firstTextBaseline) {
     Text("基线对齐")
@@ -176,6 +179,7 @@ HStack(alignment: .firstTextBaseline) {
    - 适当使用Group组织视图
 
 3. **响应式布局**
+
 ```swift
 @Environment(\.horizontalSizeClass) var sizeClass
 
@@ -189,6 +193,7 @@ var body: some View {
 ```
 
 4. **可访问性**
+
 ```swift
 Text("标签")
     .accessibilityLabel("自定义标签")

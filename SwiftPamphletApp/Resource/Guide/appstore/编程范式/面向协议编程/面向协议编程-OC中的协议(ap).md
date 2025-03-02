@@ -46,17 +46,19 @@
    - @optional：可选实现的方法
 
 2. **协议继承**
-   ```objc
-   @protocol AdvancedDataProviding <DataProviding>
-   - (void)processData:(NSArray *)data;
-   @end
-   ```
+
+```objc
+@protocol AdvancedDataProviding <DataProviding>
+- (void)processData:(NSArray *)data;
+@end
+```
 
 3. **协议组合**
-   ```objc
-   @interface DataProcessor : NSObject <DataProviding, NSCopying>
-   @end
-   ```
+
+```objc
+@interface DataProcessor : NSObject <DataProviding, NSCopying>
+@end
+```
 
 ## 常见应用场景
 
@@ -87,27 +89,30 @@
 ## 最佳实践
 
 1. **命名规范**
-   ```objc
-   // 使用描述性的名称
-   @protocol UserAuthenticating <NSObject>
-   - (void)authenticateUser:(User *)user completion:(void(^)(BOOL success))completion;
-   @end
-   ```
+
+```objc
+// 使用描述性的名称
+@protocol UserAuthenticating <NSObject>
+- (void)authenticateUser:(User *)user completion:(void(^)(BOOL success))completion;
+@end
+```
 
 2. **错误处理**
-   ```objc
-   @protocol NetworkService <NSObject>
-   - (void)fetchDataWithCompletion:(void(^)(id data, NSError *error))completion;
-   @end
-   ```
+
+```objc
+@protocol NetworkService <NSObject>
+- (void)fetchDataWithCompletion:(void(^)(id data, NSError *error))completion;
+@end
+```
 
 3. **类型检查**
-   ```objc
-   if ([object conformsToProtocol:@protocol(DataProviding)]) {
-       id<DataProviding> provider = (id<DataProviding>)object;
-       [provider fetchData];
-   }
-   ```
+
+```objc
+if ([object conformsToProtocol:@protocol(DataProviding)]) {
+      id<DataProviding> provider = (id<DataProviding>)object;
+      [provider fetchData];
+}
+```
 
 ## 与Swift的区别
 
@@ -117,13 +122,14 @@
    - OC不支持协议扩展
 
 2. **功能限制**
-   ```objc
-   // OC中不支持默认实现
-   @protocol Drawable <NSObject>
-   @required
-   - (void)draw; // 无法提供默认实现
-   @end
-   ```
+
+```objc
+// OC中不支持默认实现
+@protocol Drawable <NSObject>
+@required
+- (void)draw; // 无法提供默认实现
+@end
+```
 
 3. **类型系统**
    - OC的协议主要用于引用类型
@@ -203,21 +209,22 @@
    - 注意block中的循环引用问题
 
 2. **方法检查**
-   ```objc
-   if ([self.delegate respondsToSelector:@selector(dataDidUpdate)]) {
-       [self.delegate dataDidUpdate];
-   }
-   ```
+
+```objc
+if ([self.delegate respondsToSelector:@selector(dataDidUpdate)]) {
+      [self.delegate dataDidUpdate];
+}
+```
 
 3. **多协议遵守**
-   ```objc
-   @interface ComplexManager : NSObject <
-       NetworkRequestable,
-       DataProviding,
-       UITableViewDataSource
-   >
-   @end
-   ```
+
+```objc
+@interface ComplexManager : NSObject 
+    <NetworkRequestable,
+      DataProviding,
+      UITableViewDataSource>
+@end
+```
 
 通过合理使用Objective-C的协议特性，我们可以：
 

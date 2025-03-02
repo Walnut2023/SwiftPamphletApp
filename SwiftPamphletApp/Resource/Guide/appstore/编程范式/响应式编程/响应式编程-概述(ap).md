@@ -114,6 +114,7 @@ func setupValidation() {
 ## 最佳实践
 
 1. **内存管理**
+
 ```swift
 // 使用Set存储订阅者
 private var cancellables = Set<AnyCancellable>()
@@ -125,6 +126,7 @@ publisher
 ```
 
 2. **错误处理**
+
 ```swift
 // 优雅的错误处理
 publisher
@@ -135,6 +137,7 @@ publisher
 ```
 
 3. **线程管理**
+
 ```swift
 // 确保UI更新在主线程
 publisher
@@ -151,6 +154,7 @@ publisher
    - 注意内存泄漏
 
 2. **调试技巧**
+
 ```swift
 // 使用print操作符调试
 publisher

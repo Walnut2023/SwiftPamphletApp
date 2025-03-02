@@ -65,7 +65,6 @@
 		08448FE8279EC84B00B61353 /* 恒等(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08448FE7279EC84B00B61353 /* 恒等(ap).md */; };
 		08448FEA279EC86700B61353 /* 运算符(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08448FE9279EC86700B61353 /* 运算符(ap).md */; };
 		08448FEC279EC8BE00B61353 /* 注释(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08448FEB279EC8BE00B61353 /* 注释(ap).md */; };
-		08449030279ECF7D00B61353 /* 1.md in Resources */ = {isa = PBXBuildFile; fileRef = 0844902F279ECF7D00B61353 /* 1.md */; };
 		084E1A6327B517FC0072BBB6 /* Swift各版本演进(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 084E1A6227B517FC0072BBB6 /* Swift各版本演进(ap).md */; };
 		084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E1A6427B51EDB0072BBB6 /* AutoTask.swift */; };
 		0850445827B1228E0096D556 /* Result(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0850445727B1228E0096D556 /* Result(ap).md */; };
@@ -200,7 +199,7 @@
 		18920C282D73786C0009557A /* 面向协议编程-OC中的协议(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BF62D73786C0009557A /* 面向协议编程-OC中的协议(ap).md */; };
 		18920C292D73786C0009557A /* 函数式编程-概述(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BE42D73786C0009557A /* 函数式编程-概述(ap).md */; };
 		18920C2A2D73786C0009557A /* 响应式编程-网络请求实践(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C072D73786C0009557A /* 响应式编程-网络请求实践(ap).md */; };
-		18920C2B2D73786C0009557A /* 函数式编程-Swift中的map-filter-reduce(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BEB2D73786C0009557A /* 函数式编程-Swift中的map-filter-reduce(ap).md */; };
+		18920C2B2D73786C0009557A /* 函数式编程-Swift中的map,filter和reduce(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BEB2D73786C0009557A /* 函数式编程-Swift中的map,filter和reduce(ap).md */; };
 		18920C2C2D73786C0009557A /* 响应式编程-Combine框架(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C0A2D73786C0009557A /* 响应式编程-Combine框架(ap).md */; };
 		18920C2D2D73786C0009557A /* 面向协议编程-SwiftUI中的应用(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BF82D73786C0009557A /* 面向协议编程-SwiftUI中的应用(ap).md */; };
 		18920C2E2D73786C0009557A /* 响应式编程-与KVO结合(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C082D73786C0009557A /* 响应式编程-与KVO结合(ap).md */; };
@@ -215,6 +214,7 @@
 		18920C372D73786C0009557A /* 声明式编程-ResultBuilder原理(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BFF2D73786C0009557A /* 声明式编程-ResultBuilder原理(ap).md */; };
 		18920C382D73786C0009557A /* OOP-基本概念(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920BED2D73786C0009557A /* OOP-基本概念(ap).md */; };
 		18920C3A2D737E710009557A /* OOP-SOLID原则(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C392D737E710009557A /* OOP-SOLID原则(ap).md */; };
+		18920C3C2D73F08F0009557A /* intro.md in Resources */ = {isa = PBXBuildFile; fileRef = 18920C3B2D73F08F0009557A /* intro.md */; };
 		18ADF3352D6CCA6300316707 /* 格式化(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18ADF2732D6CCA6300316707 /* 格式化(ap).md */; };
 		18ADF3362D6CCA6300316707 /* prepend(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18ADF24B2D6CCA6300316707 /* prepend(ap).md */; };
 		18ADF3372D6CCA6300316707 /* Safe Area(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 18ADF2BC2D6CCA6300316707 /* Safe Area(ap).md */; };
@@ -518,7 +518,6 @@
 		08448FE7279EC84B00B61353 /* 恒等(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "恒等(ap).md"; sourceTree = "<group>"; };
 		08448FE9279EC86700B61353 /* 运算符(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "运算符(ap).md"; sourceTree = "<group>"; };
 		08448FEB279EC8BE00B61353 /* 注释(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "注释(ap).md"; sourceTree = "<group>"; };
-		0844902F279ECF7D00B61353 /* 1.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 1.md; sourceTree = "<group>"; };
 		084E1A6227B517FC0072BBB6 /* Swift各版本演进(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Swift各版本演进(ap).md"; sourceTree = "<group>"; };
 		084E1A6427B51EDB0072BBB6 /* AutoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTask.swift; sourceTree = "<group>"; };
 		0850445727B1228E0096D556 /* Result(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Result(ap).md"; sourceTree = "<group>"; };
@@ -630,7 +629,7 @@
 		18920BE82D73786C0009557A /* 函数式编程-OC中的函数式特性(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-OC中的函数式特性(ap).md"; sourceTree = "<group>"; };
 		18920BE92D73786C0009557A /* 函数式编程-Swift实现(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-Swift实现(ap).md"; sourceTree = "<group>"; };
 		18920BEA2D73786C0009557A /* 函数式编程-Swift中的函数组合(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-Swift中的函数组合(ap).md"; sourceTree = "<group>"; };
-		18920BEB2D73786C0009557A /* 函数式编程-Swift中的map-filter-reduce(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-Swift中的map-filter-reduce(ap).md"; sourceTree = "<group>"; };
+		18920BEB2D73786C0009557A /* 函数式编程-Swift中的map,filter和reduce(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "函数式编程-Swift中的map,filter和reduce(ap).md"; sourceTree = "<group>"; };
 		18920BED2D73786C0009557A /* OOP-基本概念(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OOP-基本概念(ap).md"; sourceTree = "<group>"; };
 		18920BEE2D73786C0009557A /* OOP-优缺点分析(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OOP-优缺点分析(ap).md"; sourceTree = "<group>"; };
 		18920BEF2D73786C0009557A /* OOP-Swift中的类和继承(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OOP-Swift中的类和继承(ap).md"; sourceTree = "<group>"; };
@@ -663,6 +662,7 @@
 		18920C0D2D73786C0009557A /* 响应式编程-SwiftConcurrency+Combine(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-SwiftConcurrency+Combine(ap).md"; sourceTree = "<group>"; };
 		18920C0E2D73786C0009557A /* 响应式编程-SwiftUI状态管理(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "响应式编程-SwiftUI状态管理(ap).md"; sourceTree = "<group>"; };
 		18920C392D737E710009557A /* OOP-SOLID原则(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OOP-SOLID原则(ap).md"; sourceTree = "<group>"; };
+		18920C3B2D73F08F0009557A /* intro.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = intro.md; sourceTree = "<group>"; };
 		18ADF22F2D6CCA6300316707 /* Keychain(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Keychain(ap).md"; sourceTree = "<group>"; };
 		18ADF2312D6CCA6300316707 /* 布局动画(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "布局动画(ap).md"; sourceTree = "<group>"; };
 		18ADF2322D6CCA6300316707 /* 动画-例子(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "动画-例子(ap).md"; sourceTree = "<group>"; };
@@ -1179,9 +1179,9 @@
 		08AEAEE7277EDD5D00B969E2 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
+				18920C3B2D73F08F0009557A /* intro.md */,
 				08BDD4FB2C6B007A00914412 /* appstore */,
 				08448F44279E7E0300B61353 /* Swift语法 */,
-				0844902F279ECF7D00B61353 /* 1.md */,
 			);
 			path = Guide;
 			sourceTree = "<group>";
@@ -1529,7 +1529,7 @@
 				18920BE82D73786C0009557A /* 函数式编程-OC中的函数式特性(ap).md */,
 				18920BE92D73786C0009557A /* 函数式编程-Swift实现(ap).md */,
 				18920BEA2D73786C0009557A /* 函数式编程-Swift中的函数组合(ap).md */,
-				18920BEB2D73786C0009557A /* 函数式编程-Swift中的map-filter-reduce(ap).md */,
+				18920BEB2D73786C0009557A /* 函数式编程-Swift中的map,filter和reduce(ap).md */,
 			);
 			path = "函数式编程";
 			sourceTree = "<group>";
@@ -2342,7 +2342,6 @@
 				08448F9E279EBAA800B61353 /* 函数(ap).md in Resources */,
 				08448FEC279EC8BE00B61353 /* 注释(ap).md in Resources */,
 				08026C432869B22E00792EF1 /* Regex(ap).md in Resources */,
-				08449030279ECF7D00B61353 /* 1.md in Resources */,
 				08448FD5279EC62700B61353 /* Sets(ap).md in Resources */,
 				08448FE0279EC7AF00B61353 /* 三元(ap).md in Resources */,
 				086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */,
@@ -2393,6 +2392,7 @@
 				18ADF3612D6CCA6300316707 /* LazyVGrid和LazyHGrid(ap).md in Resources */,
 				18ADF3622D6CCA6300316707 /* Blend Modes(ap).md in Resources */,
 				18ADF3632D6CCA6300316707 /* 结构化并发(ap).md in Resources */,
+				18920C3C2D73F08F0009557A /* intro.md in Resources */,
 				18ADF3642D6CCA6300316707 /* SwiftUI对标的UIKit视图(ap).md in Resources */,
 				18ADF3652D6CCA6300316707 /* Previews协议(ap).md in Resources */,
 				18ADF3662D6CCA6300316707 /* KeyframeAnimator(ap).md in Resources */,
@@ -2643,7 +2643,7 @@
 				18920C282D73786C0009557A /* 面向协议编程-OC中的协议(ap).md in Resources */,
 				18920C292D73786C0009557A /* 函数式编程-概述(ap).md in Resources */,
 				18920C2A2D73786C0009557A /* 响应式编程-网络请求实践(ap).md in Resources */,
-				18920C2B2D73786C0009557A /* 函数式编程-Swift中的map-filter-reduce(ap).md in Resources */,
+				18920C2B2D73786C0009557A /* 函数式编程-Swift中的map,filter和reduce(ap).md in Resources */,
 				18920C2C2D73786C0009557A /* 响应式编程-Combine框架(ap).md in Resources */,
 				18920C2D2D73786C0009557A /* 面向协议编程-SwiftUI中的应用(ap).md in Resources */,
 				18920C2E2D73786C0009557A /* 响应式编程-与KVO结合(ap).md in Resources */,

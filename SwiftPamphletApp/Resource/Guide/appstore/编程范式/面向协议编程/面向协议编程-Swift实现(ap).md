@@ -379,69 +379,74 @@ struct ContentView: View {
 在使用POP时，需要注意以下性能优化点：
 
 1. **静态派发vs动态派发**
-   ```swift
-   // 优先使用静态派发
-   protocol FastProtocol {
-       func fastMethod()
-   }
-   
-   extension FastProtocol {
-       // 在协议扩展中实现的方法默认使用静态派发
-       func fastMethod() {
-           print("Fast execution")
-       }
-   }
-   
-   // 需要动态派发时使用@objc
-   @objc protocol DynamicProtocol {
-       func dynamicMethod()
-   }
-   ```
+
+```swift
+// 优先使用静态派发
+protocol FastProtocol {
+    func fastMethod()
+}
+
+extension FastProtocol {
+    // 在协议扩展中实现的方法默认使用静态派发
+    func fastMethod() {
+        print("Fast execution")
+    }
+}
+
+// 需要动态派发时使用@objc
+@objc protocol DynamicProtocol {
+    func dynamicMethod()
+}
+```
 
 2. **避免协议嵌套**
-   ```swift
-   // 不推荐
-   protocol OuterProtocol {
-       associatedtype Inner: InnerProtocol
-       func process(_ item: Inner)
-   }
-   
-   // 推荐
-   protocol CombinedProtocol {
-       associatedtype Item
-       func process(_ item: Item)
-   }
-   ```
+
+```swift
+// 不推荐
+protocol OuterProtocol {
+    associatedtype Inner: InnerProtocol
+    func process(_ item: Inner)
+}
+
+// 推荐
+protocol CombinedProtocol {
+    associatedtype Item
+    func process(_ item: Item)
+}
+```
 
 3. **使用值类型**
-   ```swift
-   // 推荐使用结构体实现协议
-   struct FastImplementation: FastProtocol {
-       // 值类型通常具有更好的性能
-   }
-   ```
+
+```swift
+// 推荐使用结构体实现协议
+struct FastImplementation: FastProtocol {
+   // 值类型通常具有更好的性能
+}
+```
 
 ## 调试技巧
 
 1. **类型检查**
-   ```swift
-   func debugType<T>(_ value: T) {
-       print("Type of value: \(type(of: value))")
-       print("Type conforms to Equatable: \(value is Equatable)")
-   }
-   ```
+
+```swift
+func debugType<T>(_ value: T) {
+   print("Type of value: \(type(of: value))")
+   print("Type conforms to Equatable: \(value is Equatable)")
+}
+```
 
 2. **协议一致性检查**
-   ```swift
-   protocol Debuggable {
-       var debugDescription: String { get }
+
+```swift
+protocol Debuggable {
+   var debugDescription: String { get }
+}
+
+extension Debuggable {
+   var debugDescription: String {
+       return "Type: \(type(of: self))"
    }
-   
-   extension Debuggable {
-       var debugDescription: String {
-           return "Type: \(type(of: self))"
-       }
-   }
-   ```
+}
+```
 
 通过以上示例和最佳实践，我们可以更好地理解和应用Swift的面向协议编程范式。POP不仅提供了更灵活的代码组织方式，还能帮助我们构建更易维护、更高性能的应用程序。在实际开发中，建议根据具体场景选择合适的设计方案，合理运用协议的各种特性。

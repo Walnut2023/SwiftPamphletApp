@@ -132,6 +132,7 @@ extension EnvironmentValues {
    - 适当使用`@StateObject`而不是`@ObservedObject`
 
 4. **组件复用**
+
 ```swift
 struct CustomButton: View {
     let title: String
