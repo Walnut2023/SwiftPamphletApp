@@ -5,15 +5,15 @@
 //  Created by Ming Dai on 2024/3/11.
 //
 
-import SwiftUI
-import SwiftData
-import SwiftSoup
+import InfoOrganizer
 import Ink
 import PhotosUI
-import InfoOrganizer
 import SMFile
 import SMNetwork
 import SMUI
+import SwiftData
+import SwiftSoup
+import SwiftUI
 
 struct EditInfoView: View {
     @Environment(\.modelContext) var modelContext
@@ -21,7 +21,7 @@ struct EditInfoView: View {
     @Bindable var info: IOInfo
     @Query(IOCategory.all) var categories: [IOCategory]
     @State private var showSheet = false
-    
+
     // Inspector
     @State var isShowInspector = false
     enum InspectorType {
@@ -40,15 +40,18 @@ struct EditInfoView: View {
     @State var addWebImageUrl = ""
     // 关联输入和编辑的开关
     @State var isShowRelateTextField = false
-    
+
+    // MARK: Text And Preview
+    @State private var isShowPreview = false  // 添加预览开关状态
+
     var body: some View {
         VStack {
             Form {
                 Section {
                     titleInputView
                     urlInputView
-                } // end Section
-                
+                }  // end Section
+
                 Section {
                     categoryInputView
                     if isShowRelateTextField == true {
@@ -69,14 +72,17 @@ struct EditInfoView: View {
                         tabSwitch()
                         isStopLoadingWeb = false
                     }
-                    .onChange(of: info, { oldValue, newValue in
-                        tabSwitch()
-                    })
+                    .onChange(
+                        of: info,
+                        { oldValue, newValue in
+                            tabSwitch()
+                        }
+                    )
                     .onAppear {
                         tabSwitch()
                     }
                 }
-            } // end form
+            }  // end form
             .padding(10)
             .inspector(isPresented: $isShowInspector) {
                 switch inspectorType {
@@ -85,7 +91,7 @@ struct EditInfoView: View {
                 case .customSearch:
                     EditCustomSearchView()
                 }
-                
+
             }
             .toolbar {
                 Button("关闭", systemImage: "sidebar.right") {
@@ -128,17 +134,17 @@ struct EditInfoView: View {
                 }
             }
             Spacer()
-        } // end VStack
+        }  // end VStack
     }
-    
+
     // MARK: Image
     @State private var largeImageUrlStr = ""
     #if os(macOS)
-    @State private var largeNSImage: NSImage? = nil
+        @State private var largeNSImage: NSImage? = nil
     #elseif os(iOS)
-    @State private var largeUIImage: UIImage? = nil
+        @State private var largeUIImage: UIImage? = nil
     #endif
-    
+
     @MainActor
     @ViewBuilder
     func imagePickAndShowView() -> some View {
@@ -162,125 +168,133 @@ struct EditInfoView: View {
                 ScrollView {
                     if let infoImgs = info.imgs {
                         if infoImgs.count > 0 {
-                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 150),spacing: 10)]) {
-                                ForEach(Array(infoImgs.enumerated()), id:\.0) {i, img in
+                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 10)]) {
+                                ForEach(Array(infoImgs.enumerated()), id: \.0) { i, img in
                                     VStack {
                                         if let data = img.imgData {
                                             #if os(macOS)
-                                            if let nsImg = NSImage(data: data) {
-                                                Image(nsImage: nsImg)
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .cornerRadius(5)
-                                                    .onTapGesture(perform: {
-                                                        largeNSImage = nsImg
-                                                    })
-                                                    .contextMenu {
-                                                        Button {
-                                                            IOInfo.updateCoverImage(info: info, img: img)
-                                                        } label: {
-                                                            Label("设为封面图", image: "doc.text.image")
-                                                        }
-                                                        Button {
-                                                            info.imgs?.remove(at: i)
-                                                            IOImg.delete(img)
-                                                        } label: {
-                                                            Label("删除", image: "circle")
-                                                        }
+                                                if let nsImg = NSImage(data: data) {
+                                                    Image(nsImage: nsImg)
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .cornerRadius(5)
+                                                        .onTapGesture(perform: {
+                                                            largeNSImage = nsImg
+                                                        })
+                                                        .contextMenu {
+                                                            Button {
+                                                                IOInfo.updateCoverImage(
+                                                                    info: info, img: img)
+                                                            } label: {
+                                                                Label(
+                                                                    "设为封面图", image: "doc.text.image"
+                                                                )
+                                                            }
+                                                            Button {
+                                                                info.imgs?.remove(at: i)
+                                                                IOImg.delete(img)
+                                                            } label: {
+                                                                Label("删除", image: "circle")
+                                                            }
 
-                                                    }
-                                            }
+                                                        }
+                                                }
                                             #elseif os(iOS)
-                                            if let uiImg = UIImage(data: data) {
-                                                Image(uiImage: uiImg)
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .cornerRadius(5)
-                                                    .onTapGesture(perform: {
-                                                        largeUIImage = uiImg
-                                                    })
-                                                    .contextMenu {
-                                                        Button {
-                                                            IOInfo.updateCoverImage(info: info, img: img)
-                                                        } label: {
-                                                            Label("设为封面图", image: "doc.text.image")
+                                                if let uiImg = UIImage(data: data) {
+                                                    Image(uiImage: uiImg)
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .cornerRadius(5)
+                                                        .onTapGesture(perform: {
+                                                            largeUIImage = uiImg
+                                                        })
+                                                        .contextMenu {
+                                                            Button {
+                                                                IOInfo.updateCoverImage(
+                                                                    info: info, img: img)
+                                                            } label: {
+                                                                Label(
+                                                                    "设为封面图", image: "doc.text.image"
+                                                                )
+                                                            }
+                                                            Button {
+                                                                info.imgs?.remove(at: i)
+                                                                IOImg.delete(img)
+                                                            } label: {
+                                                                Label("删除", image: "circle")
+                                                            }
+
                                                         }
-                                                        Button {
-                                                            info.imgs?.remove(at: i)
-                                                            IOImg.delete(img)
-                                                        } label: {
-                                                            Label("删除", image: "circle")
-                                                        }
-                                                        
-                                                    }
-                                            }
-                                        #endif
+                                                }
+                                            #endif
                                         } else if img.url.isEmpty == false {
                                             NukeImage(url: img.url)
-                                            .contextMenu {
-                                                Button {
-                                                    IOInfo.updateCoverImage(info: info, img: IOImg(url: img.url))
-                                                } label: {
-                                                    Label("设为封面图", image: "doc.text.image")
+                                                .contextMenu {
+                                                    Button {
+                                                        IOInfo.updateCoverImage(
+                                                            info: info, img: IOImg(url: img.url))
+                                                    } label: {
+                                                        Label("设为封面图", image: "doc.text.image")
+                                                    }
+                                                    Button {
+                                                        #if os(macOS)
+                                                            let p = NSPasteboard.general
+                                                            p.copyText(img.url)
+                                                        #elseif os(iOS)
+                                                            let p = UIPasteboard.general
+                                                            p.string = img.url
+                                                        #endif
+                                                    } label: {
+                                                        Label("复制图片链接", image: "circle")
+                                                    }
+                                                    Button {
+                                                        info.imgs?.remove(at: i)
+                                                        IOImg.delete(img)
+                                                    } label: {
+                                                        Label("删除", image: "circle")
+                                                    }
                                                 }
-                                                Button {
-                                                    #if os(macOS)
-                                                    let p = NSPasteboard.general
-                                                    p.copyText(img.url)
-                                                    #elseif os(iOS)
-                                                    let p = UIPasteboard.general
-                                                    p.string = img.url
-                                                    #endif
-                                                } label: {
-                                                    Label("复制图片链接", image: "circle")
+                                                .onTapGesture {
+                                                    largeImageUrlStr = img.url
                                                 }
-                                                Button {
-                                                    info.imgs?.remove(at: i)
-                                                    IOImg.delete(img)
-                                                } label: {
-                                                    Label("删除", image: "circle")
-                                                }
-                                            }
-                                            .onTapGesture {
-                                                largeImageUrlStr = img.url
-                                            }
                                         }
-                                    } // end VStack
-                                } // end ForEach
-                            } // end LazyVGrid
+                                    }  // end VStack
+                                }  // end ForEach
+                            }  // end LazyVGrid
                         }
-                    } // end if let
+                    }  // end if let
                     if info.imageUrls.isEmpty == false {
                         LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 10)]) {
-                            ForEach(info.imageUrls, id:\.self) { img in
+                            ForEach(info.imageUrls, id: \.self) { img in
                                 NukeImage(height: 150, url: img)
-                                .contextMenu {
-                                    Button {
-                                        IOInfo.updateCoverImage(info: info, img: IOImg(url: img))
-                                    } label: {
-                                        Label("设为封面图", image: "doc.text.image")
+                                    .contextMenu {
+                                        Button {
+                                            IOInfo.updateCoverImage(
+                                                info: info, img: IOImg(url: img))
+                                        } label: {
+                                            Label("设为封面图", image: "doc.text.image")
+                                        }
+                                        Button {
+                                            #if os(macOS)
+                                                let p = NSPasteboard.general
+                                                p.copyText(img)
+                                            #elseif os(iOS)
+                                                let p = UIPasteboard.general
+                                                p.string = img
+                                            #endif
+                                        } label: {
+                                            Label("复制图片链接", image: "circle")
+                                        }
                                     }
-                                    Button {
-                                        #if os(macOS)
-                                        let p = NSPasteboard.general
-                                        p.copyText(img)
-                                        #elseif os(iOS)
-                                        let p = UIPasteboard.general
-                                        p.string = img
-                                        #endif
-                                    } label: {
-                                        Label("复制图片链接", image: "circle")
+                                    .onTapGesture {
+                                        withAnimation {
+                                            largeImageUrlStr = img
+                                        }
                                     }
-                                }
-                                .onTapGesture {
-                                    withAnimation {
-                                        largeImageUrlStr = img
-                                    }
-                                }
                             }
                         }
                     }
-                } // end scrollView
+                }  // end scrollView
                 if largeImageUrlStr.isEmpty == false {
                     NukeImage(url: largeImageUrlStr)
                         .onTapGesture {
@@ -290,43 +304,46 @@ struct EditInfoView: View {
                         }
                 }
                 #if os(macOS)
-                if largeNSImage != nil {
-                    Image(nsImage: largeNSImage!)
-                        .resizable()
-                        .scaledToFit()
-                        .onTapGesture {
-                            withAnimation {
-                                largeNSImage = nil
+                    if largeNSImage != nil {
+                        Image(nsImage: largeNSImage!)
+                            .resizable()
+                            .scaledToFit()
+                            .onTapGesture {
+                                withAnimation {
+                                    largeNSImage = nil
+                                }
                             }
-                        }
-                }
+                    }
                 #elseif os(iOS)
-                if largeUIImage != nil {
-                    Image(uiImage: largeUIImage!)
-                        .resizable()
-                        .scaledToFit()
-                        .onTapGesture {
-                            withAnimation {
-                                largeUIImage = nil
+                    if largeUIImage != nil {
+                        Image(uiImage: largeUIImage!)
+                            .resizable()
+                            .scaledToFit()
+                            .onTapGesture {
+                                withAnimation {
+                                    largeUIImage = nil
+                                }
                             }
-                        }
-                }
+                    }
                 #endif
             }
         }
-        .onChange(of: info, { oldValue, newValue in
-            largeImageUrlStr = ""
-            #if os(macOS)
-            largeNSImage = nil
-            #elseif os(iOS)
-            largeUIImage = nil
-            #endif
-        })
+        .onChange(
+            of: info,
+            { oldValue, newValue in
+                largeImageUrlStr = ""
+                #if os(macOS)
+                    largeNSImage = nil
+                #elseif os(iOS)
+                    largeUIImage = nil
+                #endif
+            }
+        )
         .padding(10)
-        .tabItem { Label("图集", systemImage: "circle")}
+        .tabItem { Label("图集", systemImage: "circle") }
         .tag(5)
     }
-    
+
     // MARK: WebView
     @ViewBuilder
     private func webViewView() -> some View {
@@ -341,27 +358,63 @@ struct EditInfoView: View {
                 TextEditor(text: $info.des)
                     .frame(height: 53)
                     .padding(5)
-                    
+
             }
-                .tabItem { Label("网页", systemImage: "circle") }
-                .tag(4)
+            .tabItem { Label("网页", systemImage: "circle") }
+            .tag(4)
         }
     }
-    
+
     // MARK: Text And Preview
     @ViewBuilder
     private func textAndPreviewView() -> some View {
-        TextEditor(text: $info.des).border()
-            .padding(10)
-            .tabItem { Label("文本", systemImage: "circle") }
-            .tag(1)
-//        WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: info.des)), baseURLStr: "")
-//            .tabItem { Label("预览", systemImage: "circle") }
-//            .tag(2)
+        VStack {
+            HStack {
+                Spacer()
+                Button {
+                    isShowPreview.toggle()
+                } label: {
+                    Label("预览", systemImage: isShowPreview ? "eye.fill" : "eye")
+                }
+                .help("预览 Markdown")
+            }
+            .padding(.horizontal)
+
+            if isShowPreview {
+                // 水平分布的编辑器和预览
+                GeometryReader { geometry in
+                    HStack(spacing: 0) {
+                        // 编辑器
+                        TextEditor(text: $info.des)
+                            .border(.secondary)
+                            .padding(10)
+                            .frame(width: geometry.size.width / 2)
+
+                        // 分隔线
+                        Divider()
+
+                        // 预览 - 使用原来的 WebUIView
+                        WebUIView(
+                            html: wrapperHtmlContent(
+                                content: MarkdownParser().html(from: info.des)),
+                            baseURLStr: ""
+                        )
+                        .frame(width: geometry.size.width / 2 - 20)
+                    }
+                }
+                .frame(minHeight: 300)
+            } else {
+                // 只显示编辑器
+                TextEditor(text: $info.des)
+                    .border(.secondary)
+                    .padding(10)
+                    .frame(minHeight: 300)
+            }
+        }
+        .tabItem { Label("文本", systemImage: "circle") }
+        .tag(1)
     }
-    
-    
-    
+
     // MARK: Category
     private var categoryInputView: some View {
         HStack {
@@ -390,46 +443,49 @@ struct EditInfoView: View {
                     showSheet = true
                 }
                 .help("command + s")
-                .sheet(isPresented: $showSheet, content: {
-                    ScrollView(.vertical) {
-                        ForEach(parseSearchTerms(), id: \.self) { term in
-                            HStack {
-                                ForEach(term, id: \.self) { oneTerm in
-                                    if oneTerm.description.hasPrefix("《") {
-                                        Text(oneTerm)
-                                            .bold()
-                                    } else {
-                                        Button(oneTerm) {
-                                            showSheet = false
-                                            info.des = "[\(oneTerm)]" + "\n" + info.des
+                .sheet(
+                    isPresented: $showSheet,
+                    content: {
+                        ScrollView(.vertical) {
+                            ForEach(parseSearchTerms(), id: \.self) { term in
+                                HStack {
+                                    ForEach(term, id: \.self) { oneTerm in
+                                        if oneTerm.description.hasPrefix("《") {
+                                            Text(oneTerm)
+                                                .bold()
+                                        } else {
+                                            Button(oneTerm) {
+                                                showSheet = false
+                                                info.des = "[\(oneTerm)]" + "\n" + info.des
+                                            }
+                                            .fixedSize()
                                         }
-                                        .fixedSize()
                                     }
+                                    Spacer()
                                 }
-                                Spacer()
+                                .padding(.leading, 1)
                             }
-                            .padding(.leading, 1)
+                            .padding(2)
                         }
-                        .padding(2)
-                    }
-                    .padding(20)
-                    .toolbar {
-                        ToolbarItem(placement: .cancellationAction) {
-                            Button("关闭", systemImage: "xmark") {
-                                showSheet = false
+                        .padding(20)
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("关闭", systemImage: "xmark") {
+                                    showSheet = false
+                                }
                             }
                         }
                     }
-                })
+                )
                 .keyboardShortcut(KeyEquivalent("s"), modifiers: .command)
             }
 
             Button("管理自定标签", action: manageCustomSearch)
         }
     }
-    
+
     func fetchWebContent(urlString: String) async {
-        let re = await fetchTitleFromUrl(urlString:info.url)
+        let re = await fetchTitleFromUrl(urlString: info.url)
         await MainActor.run {
             if re.title.isEmpty == false {
                 info.name = re.title
@@ -440,14 +496,15 @@ struct EditInfoView: View {
             }
         }
     }
-    
+
     // MARK: URL
     private var urlInputView: some View {
         HStack {
-            TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://starming.com")).rounded()
+            TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://starming.com"))
+                .rounded()
                 .onSubmit {
                     info.name = "获取标题中......"
-                    
+
                     Task {
                         // MARK: 获取 Web 内容
                         await fetchWebContent(urlString: info.url)
@@ -485,10 +542,10 @@ struct EditInfoView: View {
                     }
                 }
                 .help("离线内容")
-            } // end if
+            }  // end if
         }
     }
-    
+
     // MARK: 标题
     private var titleInputView: some View {
         HStack {
@@ -503,12 +560,15 @@ struct EditInfoView: View {
             }
             .toggleStyle(.button)
             .help("归档")
-            
-            Button(action: {
-                info.updateDate = Date.now
-            }, label: {
-                Image(systemName: "arrow.up.square")
-            })
+
+            Button(
+                action: {
+                    info.updateDate = Date.now
+                },
+                label: {
+                    Image(systemName: "arrow.up.square")
+                }
+            )
             .help("提到前面")
             Button {
                 isShowRelateTextField.toggle()
@@ -520,7 +580,6 @@ struct EditInfoView: View {
         }
     }
 
-    
     // MARK: 自定标签
     @AppStorage(SPC.customSearchTerm) var term = ""
     @State private var searchTerms: [[String]] = [[String]]()
@@ -541,15 +600,15 @@ struct EditInfoView: View {
                     lineTs.append(String(tWithoutWhitespaces))
                 }
                 sterms.append(lineTs)
-            } // end if
-        } // end for
+            }  // end if
+        }  // end for
         return sterms
     }
-    
+
     @MainActor func searchTerms(arr: [[String]]) {
         searchTerms = arr
     }
-    
+
     // MARK: 数据管理
     func tabSwitch() {
         if info.url.isEmpty {
@@ -579,7 +638,7 @@ struct EditInfoView: View {
             isShowInspector.toggle()
         }
     }
-    
+
     // MARK: 图集处理
     @MainActor
     func convertDataToImage() {
@@ -594,27 +653,31 @@ struct EditInfoView: View {
         }
         selectedPhotos.removeAll()
     }
-    
+
     // MARK: 获取网页内容
-    func fetchTitleFromUrl(urlString: String, isFetchContent: Bool = false) async -> (title:String, imageUrl:String, imageUrls:[String]) {
+    func fetchTitleFromUrl(urlString: String, isFetchContent: Bool = false) async -> (
+        title: String, imageUrl: String, imageUrls: [String]
+    ) {
         var title = "没找到标题"
         guard let url = URL(string: urlString) else {
-            return (title,"",[String]())
+            return (title, "", [String]())
         }
         guard let (data, _) = try? await URLSession.shared.data(from: url) else {
-            return (title,"",[String]())
+            return (title, "", [String]())
         }
-        guard let homepageHTML = String(data: data, encoding: .utf8), let soup = try? SwiftSoup.parse(homepageHTML) else {
-            return (title,"",[String]())
+        guard let homepageHTML = String(data: data, encoding: .utf8),
+            let soup = try? SwiftSoup.parse(homepageHTML)
+        else {
+            return (title, "", [String]())
         }
-        
+
         // 获取标题
         let soupTitle = try? soup.title()
         let h1Title = try? soup.select("h1").first()?.text()
-        
+
         var imageUrl = ""
         var imageUrls = [String]()
-        
+
         // 获取图集
         do {
             let imgs = try soup.select("img").array()
@@ -623,11 +686,12 @@ struct EditInfoView: View {
                 for elm in imgs {
                     if let elmUrl = try? elm.attr("src") {
                         if elmUrl.isEmpty == false {
-                            imageUrls.append(SMNetwork.urlWithSchemeAndHost(url: url, urlStr: elmUrl))
+                            imageUrls.append(
+                                SMNetwork.urlWithSchemeAndHost(url: url, urlStr: elmUrl))
                         }
                     }
                 }
-                var imgUrl:String?
+                var imgUrl: String?
                 if imageUrls.count > 0 {
                     if imageUrls.count > 3 {
                         imgUrl = imageUrls.randomElement()
@@ -638,10 +702,9 @@ struct EditInfoView: View {
                         imageUrl = SMNetwork.urlWithSchemeAndHost(url: url, urlStr: okImgUrl)
                     }
                 }
-                
+
             }
         } catch {}
-
 
         if let okH1Title = h1Title {
             title = okH1Title
@@ -649,9 +712,22 @@ struct EditInfoView: View {
         if soupTitle?.isEmpty == false {
             title = soupTitle ?? "没找到标题"
         }
-        
+
         return (title, imageUrl, imageUrls)
     }
+
+    // 添加 Markdown 图片处理
+    private func extractMarkdownImages() {
+        let parser = MarkdownParser()
+        let html = parser.html(from: info.des)
+        // 解析 HTML 中的图片链接
+        if let doc = try? SwiftSoup.parse(html) {
+            let images = try? doc.select("img").array()
+            images?.forEach { img in
+                if let src = try? img.attr("src") {
+                    info.imageUrls.append(src)
+                }
+            }
+        }
+    }
 }
-
-
